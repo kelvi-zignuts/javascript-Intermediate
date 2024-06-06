@@ -3,7 +3,7 @@ const readline = require('readline');
 // Calculator class definition
 class Calculator {
   validateInputs(a, b) {
-    if (typeof a !== 'number' || typeof b !== 'number') {
+    if (!Number.isFinite(a) || !Number.isFinite(b)) {
       throw new Error("Both arguments must be numbers.");
     }
   }
