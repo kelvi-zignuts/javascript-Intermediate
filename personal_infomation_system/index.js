@@ -83,7 +83,7 @@ try {
     const subject = readline.question('Enter email subject: ');
     const message = readline.question('Enter email message: ');
     const emailInfo = person.sendEmail(subject, message);
-    outputs.push(...emailInfo);
+    outputs.push(...emailInfo); //... (spread operator) -> allows to spread out the elements of an array or object into seprate arguments or variables
     console.log(outputs);
 
 } catch (error) {
